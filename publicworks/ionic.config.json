@@ -1,0 +1,7 @@
+{
+  "name": "publicworks",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
