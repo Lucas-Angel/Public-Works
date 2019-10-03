@@ -1,0 +1,48 @@
+<!--<ion-header>
+  <ion-toolbar color="dark">
+    
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>-->
+
+<ion-content>
+  <div class="centro">
+    <h1>Bem-vindo(a) ao Public Works</h1>
+  </div>
+
+  
+  <div class="logo">
+    <img src="../../assets/img/logo.jpg" width="150px" height="150px">
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            E-Mail
+          </ion-label>
+          <ion-input [(ngModel)]="email"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            Senha
+          </ion-label>
+          <ion-input type="password" [(ngModel)]="senha"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <p><a>Esqueceu a sua senha?</a></p>
+  <ion-button expand="block" (click)="login()">Login</ion-button>
+  <p>Não tem uma conta? <a (click)="registrar()">Cadastre-se aqui</a></p>
+ 
+</ion-content>

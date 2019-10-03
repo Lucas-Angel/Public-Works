@@ -1,0 +1,144 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>
+      Divulgar obra
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <input type="file" id="fileupload" style="display:none">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+        <ion-fab-button color="light" (click)="tirarFotoPlaca()">
+          <ion-icon name="image"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="light">
+          <ion-icon name="camera"></ion-icon>
+        </ion-fab-button>
+  
+      </ion-fab-list>
+  </ion-fab>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">Nome da obra</ion-label>   
+          <ion-input [(ngModel)]="nomeObra"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            Custo previsto
+          </ion-label>
+          <ion-input type="number" [(ngModel)]="custoPrevisto"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            Data de inicio
+          </ion-label>
+          <ion-datetime [(ngModel)]="dataInicio" display-format="DD/MM/YYYY" picker-format="DD/MMM/YYYY" max="2030"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            Data prevista de termino
+          </ion-label>
+          <ion-datetime [(ngModel)]="dataTermino" display-format="DD/MM/YYYY" picker-format="DD/MMM/YYYY" max="2030"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            Numero
+          </ion-label>
+          <ion-input [(ngModel)]="numero"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            CEP
+          </ion-label>
+          <ion-input (ionBlur)="buscaCep(cep)" [(ngModel)]="cep" maxlength="9"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            Logradouro
+          </ion-label>
+          <ion-input [(ngModel)]="logradouro"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            Bairro
+          </ion-label>
+          <ion-input [(ngModel)]="bairro"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  
+    
+    
+  <ion-row>
+    <ion-col>
+      <ion-item lines="inset">
+        <ion-label position="floating">
+          Orgão responsavel
+        </ion-label>
+        <ion-input [(ngModel)]="orgao"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label (click)="addFoto()">
+          Adicionar uma foto
+        </ion-label>
+        <ion-icon slot="start" name="camera"></ion-icon>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+</ion-grid>
+
+  <div class="centro">
+    
+    <ion-button (click)="cadastrarObra()">Divulgar obra</ion-button>
+
+  </div>
+</ion-content>

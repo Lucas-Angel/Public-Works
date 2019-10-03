@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="secondary">
+        <ion-button (click)="logout()">
+          Sair
+          <ion-icon name="log-out"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="full">
+    <ion-avatar slot="start">
+      <img src="http://localhost:8080/publicworks/img/{{foto}}">
+    </ion-avatar>
+    <ion-label>
+      {{nome}}
+      <p><a (click)="editarPerfil()">Configurações de perfil</a></p>
+    </ion-label>
+    
+  </ion-item>
+  
+</ion-content>

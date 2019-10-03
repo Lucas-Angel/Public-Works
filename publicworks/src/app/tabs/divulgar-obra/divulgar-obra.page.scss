@@ -1,0 +1,24 @@
+
+ion-item{
+    --border-color: gray;
+}
+ .form{
+     ion-item{
+         margin: 0px 0px 15px;
+     }
+ }
+ .centro{
+     display: table;
+     margin: 0px auto;
+}
+.botaoPlaca{
+    margin-top: 15px;
+}
+p{
+    text-align: center;
+}
+ion-segment-button{
+    ion-label{
+        font-size: 12px;
+    }
+}

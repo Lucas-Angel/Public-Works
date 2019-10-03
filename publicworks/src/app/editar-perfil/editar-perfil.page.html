@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button (click)="voltar()">
+        <ion-icon name="arrow-back"></ion-icon>
+        voltar
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Editar perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid style="margin-top: 5px">
+    <ion-row>
+      <ion-col>
+        <ion-avatar style="margin: auto; width: 100px; height: 100px">
+          <img src="{{caminho}}{{foto}}">
+        </ion-avatar>
+        <p style="text-align: center" (click)="editarFoto()">Alterar foto</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item (click)="editarEmail()"><a>Editar E-Mail</a></ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item (click)="editarSenha()"><a>Editar senha</a></ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col>
+          <ion-item (click)="editarEndereco()"><a>Editar endereço</a></ion-item>
+        </ion-col>
+      </ion-row>
+
+    <ion-row>
+        <ion-col>
+          <ion-item (click)="editarNotificacao()"><a>Configuração de notificações</a></ion-item>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,131 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            Nome
+          </ion-label>
+          <ion-input [(ngModel)]="nome"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            Sobrenome
+          </ion-label>
+          <ion-input [(ngModel)]="sobrenome"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            E-Mail
+          </ion-label>
+          <ion-input [(ngModel)]="email"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            CPF
+          </ion-label>
+          <ion-input [(ngModel)]="cpf" [brmasker]="{mask:'000.000.000-00', len:14}"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col>
+          <ion-item lines="inset">
+            <ion-label position="floating">
+              Número
+            </ion-label>
+            <ion-input [(ngModel)]="numero" type="number"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            CEP
+          </ion-label>
+          <ion-input (ionBlur)="buscaCep(cep)" [(ngModel)]="cep" [brmasker]="{mask:'00000-000', len:9}"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            Rua/Avenida
+          </ion-label>
+          <ion-input [(ngModel)]="ruaav"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col>
+          <ion-item lines="inset">
+            <ion-label position="floating">
+              Complemento
+            </ion-label>
+            <ion-input [(ngModel)]="complemento"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            Bairro
+          </ion-label>
+          <ion-input [(ngModel)]="bairro"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            Senha
+          </ion-label>
+          <ion-input type="password" [(ngModel)]="senha"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="inset">
+          <ion-label position="floating">
+            Confirmar senha
+          </ion-label>
+          <ion-input type="password" [(ngModel)]="confSenha"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button expand="block" (click)="cadastrar()">Cadastrar</ion-button>
+  <p>Já tem uma conta? <a (click)="login()">Faça o seu login</a></p>
+</ion-content>

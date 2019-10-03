@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Historico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment #testV (ionChange)="verHistorico(testV.value)">
+    <ion-segment-button value="divulgacoes" checked>
+      <ion-label>Divulgações</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="denuncias">
+      <ion-label>Denuncias</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  
+  <ng-container [ngSwitch]="historico">
+    <ng-container *ngSwitchCase="'divulgacoes'">
+ 
+        <ion-list>
+      <!-- {{obrasDivulgadas.length}}-->
+          <ion-item  *ngFor="let obra of obrasDivulgadas; let i = index" (click)="verInfoObra(i)">
+            {{obra.descricaoObra}}
+              
+          </ion-item>
+        </ion-list>
+      </ng-container>
+     
+    <ng-container *ngSwitchCase="'denuncias'">
+        
+      </ng-container>
+  </ng-container>
+</ion-content>
